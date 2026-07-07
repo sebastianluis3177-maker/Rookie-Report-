@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Agency Tracker | Rookie Report</title>
+<meta name="description" content="Every notable free agent signing this offseason — contract, years, value, and our grade.">
+<link rel="canonical" href="https://rookiereport.com/free-agency">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0A0A%22/><polygon points=%2225,0 100,0 75,100 0,100%22 fill=%22%23E10600%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root=".">
+<div class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo"><span class="mark"></span>ROOKIE<b>REPORT</b></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="nba.html">NBA</a>
+      <a href="wnba.html">WNBA</a>
+      <a href="#">NFL <span class="soon">SOON</span></a>
+      <a href="soccer.html">Soccer</a>
+      <a href="trade-tracker.html">Trade Tracker</a>
+      <a href="free-agency.html" class="active">Free Agency</a>
+      <a href="rankings.html">Rankings</a>
+      <a href="opinions.html">Opinions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search" onclick="openSearch()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle onclick="toggleTheme()"></button>
+      <button class="icon-btn nav-toggle" aria-label="Menu" onclick="toggleNav()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="search-panel" id="searchPanel">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+    <p class="search-hint">Press Esc to close · ⌘K to open</p>
+  </div>
+</div>
+
+<main>
+  <div class="container page-header">
+    <span class="eyebrow">Live Tracker</span>
+    <h1>Free Agency Tracker</h1>
+    <p>Every notable signing this offseason, with contract terms and a Rookie Report grade.</p>
+  </div>
+
+  <div class="container" style="padding-top:8px;">
+    <div class="tracker-table-wrap">
+      <table class="tracker">
+        <thead>
+          <tr><th>Player</th><th>Team</th><th>Contract</th><th>Years</th><th>Value</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Naz Reid</td><td>Minnesota</td><td>Re-signed</td><td>3</td><td>$42M</td><td><span class="grade a">A-</span></td></tr>
+          <tr><td>Malik Monk</td><td>Sacramento</td><td>Re-signed</td><td>4</td><td>$78M</td><td><span class="grade b">B+</span></td></tr>
+          <tr><td>Isaiah Hartenstein</td><td>Oklahoma City</td><td>Signed</td><td>3</td><td>$87M</td><td><span class="grade a">A</span></td></tr>
+          <tr><td>Gary Trent Jr.</td><td>Milwaukee</td><td>Signed</td><td>2</td><td>$34M</td><td><span class="grade b">B</span></td></tr>
+          <tr><td>Patty Mills</td><td>Miami</td><td>Signed</td><td>1</td><td>$3M</td><td><span class="grade a">A-</span></td></tr>
+          <tr><td>Delon Wright</td><td>Denver</td><td>Signed</td><td>1</td><td>$8M</td><td><span class="grade c">C+</span></td></tr>
+          <tr><td>Bobby Portis</td><td>Milwaukee</td><td>Re-signed</td><td>2</td><td>$26M</td><td><span class="grade b">B+</span></td></tr>
+          <tr><td>Jae'Sean Tate</td><td>Houston</td><td>Signed</td><td>2</td><td>$19M</td><td><span class="grade d">C-</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-head" style="margin-top:40px;">
+      <h2>Related Coverage</h2>
+    </div>
+    <div class="grid grid-3" id="relatedGrid"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Rookie Report. All rights reserved.</span>
+      <span><a href="index.html">Back to Home</a> · <a href="/admin/">Editor Login</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script src="js/main.js"></script>
+<script>
+loadArticles().then(list=>{
+  const rel = list.filter(a=>a.categorySlug==='free-agency' || a.tags.includes('Free Agency'));
+  const grid = document.getElementById('relatedGrid');
+  grid.innerHTML = (rel.length?rel:list.slice(0,3)).map(a=>`
+    <a href="${a.url}" class="card fade-in">
+      <div class="thumb"><span class="slash-tag ${categoryClass(a.categorySlug)}">${a.category}</span><img src="${a.image}" alt="${a.title}" loading="lazy"></div>
+      <div class="body"><h3>${a.title}</h3><p>${a.excerpt}</p>
+        <div class="meta"><span class="author">${a.author}</span><span>${a.readTime}</span></div>
+      </div>
+    </a>`).join('');
+  initFadeIns();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Rookie Report</title>
+<meta name="description" content="Rookie Report is an independent sports media website covering NBA, WNBA, soccer, trades, free agency, and player analysis.">
+<link rel="canonical" href="https://rookiereport.com/about">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0A0A%22/><polygon points=%2225,0 100,0 75,100 0,100%22 fill=%22%23E10600%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root=".">
+<div class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo"><span class="mark"></span>ROOKIE<b>REPORT</b></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="nba.html">NBA</a>
+      <a href="wnba.html">WNBA</a>
+      <a href="#">NFL <span class="soon">SOON</span></a>
+      <a href="soccer.html">Soccer</a>
+      <a href="trade-tracker.html">Trade Tracker</a>
+      <a href="free-agency.html">Free Agency</a>
+      <a href="rankings.html">Rankings</a>
+      <a href="opinions.html">Opinions</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search" onclick="openSearch()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle onclick="toggleTheme()"></button>
+      <button class="icon-btn nav-toggle" aria-label="Menu" onclick="toggleNav()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="search-panel" id="searchPanel">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+    <p class="search-hint">Press Esc to close · ⌘K to open</p>
+  </div>
+</div>
+
+<main>
+  <div class="container page-header">
+    <span class="eyebrow">Who We Are</span>
+    <h1>About Rookie Report</h1>
+  </div>
+
+  <div class="container" style="padding-top:16px; max-width:760px;">
+    <p style="font-size:17px; line-height:1.8; color:var(--text-2);">Rookie Report is an independent sports media website focused on NBA, WNBA, soccer, trades, free agency, player analysis, and breaking news.</p>
+    <p style="font-size:17px; line-height:1.8; color:var(--text-2);">Our mission is to provide accurate reporting, thoughtful analysis, and engaging sports coverage for fans around the world. We built our trackers and rankings because we were tired of digging through a dozen tabs to find the same information — so we put it all in one place, updated the way we'd want it updated if we were the ones reading it.</p>
+
+    <div class="stat-row">
+      <div class="stat"><b>3</b><span>Leagues Covered</span></div>
+      <div class="stat"><b>Weekly</b><span>Rankings Updates</span></div>
+      <div class="stat"><b>Live</b><span>Trade &amp; FA Tracking</span></div>
+    </div>
+
+    <div class="section-head" style="margin-top:32px;">
+      <h2>What We Cover</h2>
+    </div>
+    <ul style="display:flex; flex-direction:column; gap:14px; font-size:15px; color:var(--text-2); line-height:1.6;">
+      <li><strong style="color:var(--text-1);">Breaking news</strong> — trades, signings, and roster moves as they happen.</li>
+      <li><strong style="color:var(--text-1);">Analysis</strong> — what a move actually means on the court, not just the headline.</li>
+      <li><strong style="color:var(--text-1);">Rankings</strong> — Top 25 players, Top 10 rookies, and weekly power rankings.</li>
+      <li><strong style="color:var(--text-1);">Trackers</strong> — every trade and free agent signing, graded and organized.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Rookie Report. All rights reserved.</span>
+      <span><a href="index.html">Back to Home</a> · <a href="/admin/">Editor Login</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script src="js/main.js"></script>
+</body>
+</html>

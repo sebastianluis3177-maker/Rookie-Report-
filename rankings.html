@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rankings | Rookie Report</title>
+<meta name="description" content="Top 25 NBA players, Top 10 rookies, and weekly power rankings from Rookie Report.">
+<link rel="canonical" href="https://rookiereport.com/rankings">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0A0A%22/><polygon points=%2225,0 100,0 75,100 0,100%22 fill=%22%23E10600%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root=".">
+<div class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo"><span class="mark"></span>ROOKIE<b>REPORT</b></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="nba.html">NBA</a>
+      <a href="wnba.html">WNBA</a>
+      <a href="#">NFL <span class="soon">SOON</span></a>
+      <a href="soccer.html">Soccer</a>
+      <a href="trade-tracker.html">Trade Tracker</a>
+      <a href="free-agency.html">Free Agency</a>
+      <a href="rankings.html" class="active">Rankings</a>
+      <a href="opinions.html">Opinions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search" onclick="openSearch()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle onclick="toggleTheme()"></button>
+      <button class="icon-btn nav-toggle" aria-label="Menu" onclick="toggleNav()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="search-panel" id="searchPanel">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+    <p class="search-hint">Press Esc to close · ⌘K to open</p>
+  </div>
+</div>
+
+<main>
+  <div class="container page-header">
+    <span class="eyebrow">Updated Weekly</span>
+    <h1>Rankings</h1>
+    <p>Our staff's Top 25 players, Top 10 rookies, and power rankings — revisited every week of the season.</p>
+  </div>
+
+  <div class="container" style="padding-top:8px;">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab-top25">Top 25 Players</button>
+      <button class="tab-btn" data-tab="tab-rookies">Top 10 Rookies</button>
+      <button class="tab-btn" data-tab="tab-power">Power Rankings</button>
+    </div>
+
+    <div id="tab-top25" class="tab-panel active">
+      <div class="tracker-table-wrap" style="padding:8px 12px;">
+        <div class="rank-row"><span class="rank-pos">01</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=51" alt=""><div class="rank-info"><h4>Nikola Jokić</h4><span>Denver · Center</span></div><span class="rank-move same">–</span></div>
+        <div class="rank-row"><span class="rank-pos">02</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=52" alt=""><div class="rank-info"><h4>Shai Gilgeous-Alexander</h4><span>Oklahoma City · Guard</span></div><span class="rank-move up">▲ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">03</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=53" alt=""><div class="rank-info"><h4>Giannis Antetokounmpo</h4><span>Milwaukee · Forward</span></div><span class="rank-move down">▼ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">04</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=54" alt=""><div class="rank-info"><h4>Luka Dončić</h4><span>Los Angeles Lakers · Guard</span></div><span class="rank-move same">–</span></div>
+        <div class="rank-row"><span class="rank-pos">05</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=55" alt=""><div class="rank-info"><h4>Anthony Edwards</h4><span>Minnesota · Guard</span></div><span class="rank-move up">▲ 2</span></div>
+        <div class="rank-row"><span class="rank-pos">06</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=56" alt=""><div class="rank-info"><h4>Jayson Tatum</h4><span>Boston · Forward</span></div><span class="rank-move down">▼ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">07</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=57" alt=""><div class="rank-info"><h4>Victor Wembanyama</h4><span>San Antonio · Center</span></div><span class="rank-move up">▲ 3</span></div>
+        <div class="rank-row"><span class="rank-pos">08</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=58" alt=""><div class="rank-info"><h4>Devin Booker</h4><span>Phoenix · Guard</span></div><span class="rank-move same">–</span></div>
+      </div>
+    </div>
+
+    <div id="tab-rookies" class="tab-panel">
+      <div class="tracker-table-wrap" style="padding:8px 12px;">
+        <div class="rank-row"><span class="rank-pos">01</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=61" alt=""><div class="rank-info"><h4>Cooper Flagg</h4><span>Dallas · Forward</span></div><span class="rank-move same">–</span></div>
+        <div class="rank-row"><span class="rank-pos">02</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=62" alt=""><div class="rank-info"><h4>Dylan Harper</h4><span>San Antonio · Guard</span></div><span class="rank-move up">▲ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">03</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=63" alt=""><div class="rank-info"><h4>Ace Bailey</h4><span>Utah · Forward</span></div><span class="rank-move down">▼ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">04</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=64" alt=""><div class="rank-info"><h4>VJ Edgecombe</h4><span>Philadelphia · Guard</span></div><span class="rank-move same">–</span></div>
+        <div class="rank-row"><span class="rank-pos">05</span><img class="rank-photo" src="https://i.pravatar.cc/100?img=65" alt=""><div class="rank-info"><h4>Kon Knueppel</h4><span>Charlotte · Guard</span></div><span class="rank-move up">▲ 2</span></div>
+      </div>
+    </div>
+
+    <div id="tab-power" class="tab-panel">
+      <div class="tracker-table-wrap" style="padding:8px 12px;">
+        <div class="rank-row"><span class="rank-pos">01</span><img class="rank-photo" src="https://picsum.photos/seed/team-thunder/100/100" alt=""><div class="rank-info"><h4>Oklahoma City Thunder</h4><span>Western Conference</span></div><span class="rank-move same">–</span></div>
+        <div class="rank-row"><span class="rank-pos">02</span><img class="rank-photo" src="https://picsum.photos/seed/team-celtics/100/100" alt=""><div class="rank-info"><h4>Boston Celtics</h4><span>Eastern Conference</span></div><span class="rank-move up">▲ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">03</span><img class="rank-photo" src="https://picsum.photos/seed/team-nuggets/100/100" alt=""><div class="rank-info"><h4>Denver Nuggets</h4><span>Western Conference</span></div><span class="rank-move down">▼ 1</span></div>
+        <div class="rank-row"><span class="rank-pos">04</span><img class="rank-photo" src="https://picsum.photos/seed/team-lakers/100/100" alt=""><div class="rank-info"><h4>Los Angeles Lakers</h4><span>Western Conference</span></div><span class="rank-move up">▲ 4</span></div>
+        <div class="rank-row"><span class="rank-pos">05</span><img class="rank-photo" src="https://picsum.photos/seed/team-timberwolves/100/100" alt=""><div class="rank-info"><h4>Minnesota Timberwolves</h4><span>Western Conference</span></div><span class="rank-move same">–</span></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Rookie Report. All rights reserved.</span>
+      <span><a href="index.html">Back to Home</a> · <a href="/admin/">Editor Login</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script src="js/main.js"></script>
+</body>
+</html>
