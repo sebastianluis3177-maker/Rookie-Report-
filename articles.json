@@ -1,0 +1,216 @@
+{
+  "articles": [
+    {
+      "slug": "walker-kessler-lakers-defensive-identity",
+      "title": "Walker Kessler Gives the Lakers a Defensive Identity",
+      "category": "NBA",
+      "categorySlug": "nba",
+      "excerpt": "The trade for Kessler didn't just add a shot-blocker \u2014 it gave Los Angeles a system built around the rim for the first time in years.",
+      "author": "Marcus Reyes",
+      "authorImg": "https://i.pravatar.cc/100?img=12",
+      "date": "2026-07-03",
+      "readTime": "6 min read",
+      "image": "https://picsum.photos/seed/kessler-lakers/900/560",
+      "url": "article.html",
+      "featured": true,
+      "tags": [
+        "NBA",
+        "Trade Analysis",
+        "Lakers"
+      ]
+    },
+    {
+      "slug": "giannis-trade-rumors-continue",
+      "title": "Giannis Trade Rumors Continue to Swirl Around the League",
+      "category": "NBA",
+      "categorySlug": "nba",
+      "excerpt": "Front offices are lining up war rooms as speculation grows heading into the new league year.",
+      "author": "Dana Whitfield",
+      "authorImg": "https://i.pravatar.cc/100?img=32",
+      "date": "2026-07-02",
+      "readTime": "5 min read",
+      "image": "https://picsum.photos/seed/giannis-rumors/900/560",
+      "url": "#",
+      "featured": true,
+      "tags": [
+        "NBA",
+        "Trade Analysis"
+      ]
+    },
+    {
+      "slug": "nba-free-agency-grades",
+      "title": "Latest NBA Free Agency Grades: Winners and Losers",
+      "category": "Free Agency",
+      "categorySlug": "free-agency",
+      "excerpt": "Grading every notable signing so far, from bargain deals to moves that could backfire fast.",
+      "author": "Priya Nandan",
+      "authorImg": "https://i.pravatar.cc/100?img=45",
+      "date": "2026-07-01",
+      "readTime": "8 min read",
+      "image": "https://picsum.photos/seed/fa-grades/900/560",
+      "url": "free-agency.html",
+      "featured": true,
+      "tags": [
+        "Free Agency",
+        "Player Rankings"
+      ]
+    },
+    {
+      "slug": "wnba-midseason-awards",
+      "title": "WNBA Midseason Awards: MVP, DPOY, and Breakout Star",
+      "category": "WNBA",
+      "categorySlug": "wnba",
+      "excerpt": "A season of parity has made every award race tighter than it's been in a decade.",
+      "author": "Alicia Moore",
+      "authorImg": "https://i.pravatar.cc/100?img=47",
+      "date": "2026-06-30",
+      "readTime": "7 min read",
+      "image": "https://picsum.photos/seed/wnba-awards/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "WNBA",
+        "Power Rankings"
+      ]
+    },
+    {
+      "slug": "lamine-yamal-rise-continues",
+      "title": "Lamine Yamal's Rise Continues to Reshape the Table",
+      "category": "Soccer",
+      "categorySlug": "soccer",
+      "excerpt": "Barely out of his teens, Yamal is now the player defenses are forced to game-plan around first.",
+      "author": "Tom\u00e1s Herrera",
+      "authorImg": "https://i.pravatar.cc/100?img=15",
+      "date": "2026-06-29",
+      "readTime": "6 min read",
+      "image": "https://picsum.photos/seed/yamal-rise/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "Soccer",
+        "Player Rankings"
+      ]
+    },
+    {
+      "slug": "nba-power-rankings-week-14",
+      "title": "NBA Power Rankings: Week 14 Movers and Fallers",
+      "category": "NBA",
+      "categorySlug": "nba",
+      "excerpt": "A three-team logjam at the top and a surprise team cracking the bottom five.",
+      "author": "Marcus Reyes",
+      "authorImg": "https://i.pravatar.cc/100?img=12",
+      "date": "2026-06-28",
+      "readTime": "5 min read",
+      "image": "https://picsum.photos/seed/power-rankings-14/900/560",
+      "url": "rankings.html",
+      "featured": false,
+      "tags": [
+        "Power Rankings",
+        "NBA"
+      ]
+    },
+    {
+      "slug": "top-10-rookies-2026",
+      "title": "Top 10 Rookies to Watch This Season",
+      "category": "Player Rankings",
+      "categorySlug": "player-rankings",
+      "excerpt": "A rookie class loaded with two-way wings and a rare true center prospect.",
+      "author": "Priya Nandan",
+      "authorImg": "https://i.pravatar.cc/100?img=45",
+      "date": "2026-06-27",
+      "readTime": "9 min read",
+      "image": "https://picsum.photos/seed/top-rookies/900/560",
+      "url": "rankings.html",
+      "featured": false,
+      "tags": [
+        "Player Rankings"
+      ]
+    },
+    {
+      "slug": "trade-tracker-week-recap",
+      "title": "Every Trade From This Week, Graded and Explained",
+      "category": "Trade Analysis",
+      "categorySlug": "trade-analysis",
+      "excerpt": "Six deals, one blockbuster, and a lot of teams reshuffling their cap sheets.",
+      "author": "Dana Whitfield",
+      "authorImg": "https://i.pravatar.cc/100?img=32",
+      "date": "2026-06-26",
+      "readTime": "7 min read",
+      "image": "https://picsum.photos/seed/trade-week/900/560",
+      "url": "trade-tracker.html",
+      "featured": false,
+      "tags": [
+        "Trade Analysis"
+      ]
+    },
+    {
+      "slug": "soccer-transfer-window-preview",
+      "title": "Five Storylines to Watch in the Summer Transfer Window",
+      "category": "Soccer",
+      "categorySlug": "soccer",
+      "excerpt": "From a stalled superstar move to a mid-table club quietly building a contender.",
+      "author": "Tom\u00e1s Herrera",
+      "authorImg": "https://i.pravatar.cc/100?img=15",
+      "date": "2026-06-25",
+      "readTime": "6 min read",
+      "image": "https://picsum.photos/seed/transfer-window/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "Soccer",
+        "Predictions"
+      ]
+    },
+    {
+      "slug": "opinion-super-teams-are-back",
+      "title": "Opinion: Super Teams Are Back, and That's a Good Thing",
+      "category": "Opinion",
+      "categorySlug": "opinion",
+      "excerpt": "The league office won't say it, but star clustering is making the regular season matter again.",
+      "author": "Marcus Reyes",
+      "authorImg": "https://i.pravatar.cc/100?img=12",
+      "date": "2026-06-24",
+      "readTime": "5 min read",
+      "image": "https://picsum.photos/seed/super-teams/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "Opinion"
+      ]
+    },
+    {
+      "slug": "game-recap-finals-game-5",
+      "title": "Game Recap: A Finals Game 5 That Will Be Replayed for Years",
+      "category": "Game Recaps",
+      "categorySlug": "game-recaps",
+      "excerpt": "Three lead changes in the final ninety seconds decided the tightest game of the series.",
+      "author": "Alicia Moore",
+      "authorImg": "https://i.pravatar.cc/100?img=47",
+      "date": "2026-06-20",
+      "readTime": "6 min read",
+      "image": "https://picsum.photos/seed/finals-game-5/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "Game Recaps"
+      ]
+    },
+    {
+      "slug": "predictions-next-season-standings",
+      "title": "Way-Too-Early Predictions for Next Season's Standings",
+      "category": "Predictions",
+      "categorySlug": "predictions",
+      "excerpt": "One lottery team we think sneaks into the play-in \u2014 and one contender that slips.",
+      "author": "Priya Nandan",
+      "authorImg": "https://i.pravatar.cc/100?img=45",
+      "date": "2026-06-18",
+      "readTime": "7 min read",
+      "image": "https://picsum.photos/seed/next-season-preds/900/560",
+      "url": "#",
+      "featured": false,
+      "tags": [
+        "Predictions"
+      ]
+    }
+  ]
+}

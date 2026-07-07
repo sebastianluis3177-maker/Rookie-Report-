@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # e.g. sebas/rookie-report
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR-DECAPBRIDGE-SITE-ID
+  gateway_url: https://gateway.decapbridge.com
+
+# The two lines above with YOUR-DECAPBRIDGE-SITE-ID come straight from
+# your DecapBridge dashboard after you add this site there — just copy
+# the config.yml it generates for you and swap it in here.
+#
+# This is what makes editing "only for you": DecapBridge only lets in
+# people YOU invite by email from your DecapBridge dashboard. No one
+# else can log into /admin, no matter how the site is hosted.
+
+publish_mode: simple
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    description: "Everything shown on the homepage, category pages, and search."
+    files:
+      - file: "data/articles.json"
+        label: "All Articles"
+        name: "articles"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["NBA", "WNBA", "Soccer", "Trade Analysis", "Free Agency", "Player Rankings", "Power Rankings", "Opinion", "Game Recaps", "Predictions"] }
+              - { label: "Category Slug (lowercase, matches nav page)", name: "categorySlug", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Author Photo URL", name: "authorImg", widget: "string" }
+              - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
+              - { label: "Featured Image URL", name: "image", widget: "string" }
+              - { label: "Article Link (page this card opens)", name: "url", widget: "string", default: "#" }
+              - { label: "Show in Featured section?", name: "featured", widget: "boolean", default: false }
+              - { label: "Tags", name: "tags", widget: "list" }
