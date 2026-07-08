@@ -1,0 +1,40 @@
+# Use DecapBridge classic auth (required)
+backend:
+  name: git-gateway
+  repo: sebastianluis3177-maker/Rookie-Report-
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/a70f5c9b-e150-4674-a075-e33e75ed41f0
+  gateway_url: https://gateway.decapbridge.com
+
+# See who did what (optional)
+publish_mode: simple
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    description: "Everything shown on the homepage, category pages, and search."
+    files:
+      - file: "data/articles.json"
+        label: "All Articles"
+        name: "articles"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["NBA", "WNBA", "Soccer", "Trade Analysis", "Free Agency", "Player Rankings", "Power Rankings", "Opinion", "Game Recaps", "Predictions"] }
+              - { label: "Category Slug (lowercase, matches nav page)", name: "categorySlug", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Author Photo URL", name: "authorImg", widget: "string" }
+              - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
+              - { label: "Featured Image URL", name: "image", widget: "string" }
+              - { label: "Article Link (page this card opens)", name: "url", widget: "string", default: "#" }
+              - { label: "Show in Featured section?", name: "featured", widget: "boolean", default: false }
+              - { label: "Tags", name: "tags", widget: "list" }
